@@ -1,12 +1,24 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import { H2, Text } from '../styles/typography';
+const NotFound = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+`;
+
+const Headline = styled.h1`
+  color: #ff8939;
+`;
 
 const NotFoundPage = () => (
-  <div>
-    <H2 orange>NOT FOUND</H2>
-    <Text>You just hit a route that doesn&#39;t exist... the sadness.</Text>
-  </div>
+  <NotFound>
+    <Headline orange>NOT FOUND</Headline>
+    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  </NotFound>
 );
 
 export default NotFoundPage;
