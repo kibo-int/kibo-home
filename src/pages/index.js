@@ -6,8 +6,8 @@ import '../../static/fontawesome/fa-solid.min';
 import '../../static/fontawesome/fa-brands.min';
 import '../../static/fontawesome/fa-regular.min';
 
-import { Title, H2, H3, Text, LinkText } from '../../static/styles/typography';
-import { media, flexbox, Grid, GridItem, Section } from '../../static/styles/utils';
+import { Title, H2, H3, Text, LinkText } from '../styles/typography';
+import { media, flexbox, Grid, GridItem, Section } from '../styles/utils';
 
 const Hero = styled.div`
   background: url("/img/city.jpeg") top;

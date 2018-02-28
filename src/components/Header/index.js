@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
 
-import { media, flexbox } from '../../../static/styles/utils';
+import { media, flexbox } from '../../styles/utils';
 
 const HeaderContainer = styled.header`
   ${flexbox};

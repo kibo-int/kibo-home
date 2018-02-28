@@ -5,10 +5,10 @@ import { ThemeProvider } from 'styled-components';
 import { IntlProvider } from 'react-intl';
 import favicon from '../../favicon.ico';
 
-import theme from '../../static/styles/theme';
-import '../../static/styles/global';
+import theme from '../styles/theme';
+import '../styles/global';
 
-import { Wrapper } from '../../static/styles/utils';
+import { Wrapper } from '../styles/utils';
 import Header from '../components/Header';
 
 const MainStyle = Wrapper.withComponent('main');
