@@ -99,7 +99,7 @@ const IndexPage = () => (
         <ResponsiveImg src="/img/kibo-translate.svg" alt="" />
         <AboutGridItem col={2}>
           <H2 orange small light>OUR MISSION</H2>
-          <Text bold large>We provide linguistic solutions for small to medium projects, including everything from translation, to interpretation, and much more.</Text>
+          <Text bold large>We provide linguistic solutions for small to medium projects, including translation, interpreting and much more.</Text>
         </AboutGridItem>
       </Grid>
     </AboutSection>
@@ -119,7 +119,7 @@ const IndexPage = () => (
           <IconContainer>
             <i className="fas fa-comments fa-3x" />
           </IconContainer>
-          <H3 center orange>Interpretation</H3>
+          <H3 center orange>Interpreting</H3>
           <Text center white>Need a last minute interpreter for your big presentation? We have professionals on standby waiting to assist you.</Text>
         </GridItem>
 
@@ -128,7 +128,7 @@ const IndexPage = () => (
             <i className="fas fa-globe fa-3x" />
           </IconContainer>
           <H3 center orange>Other Services</H3>
-          <Text center white>Haven't seen what you are looking for yet? We also provideo other services such as quality assurance website localization and image localization.</Text>
+          <Text center white>Haven&apos;t seen what you are looking for yet? We also provide other services such as quality assurance website localization and image localization.</Text>
         </GridItem>
       </ServicesGrid>
     </ServicesSection>

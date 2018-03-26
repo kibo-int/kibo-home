@@ -20,21 +20,21 @@ const TemplateWrapper = ({ children }) => (
     <ThemeProvider theme={theme}>
       <div>
         <Helmet
-          title="Kibo"
+          title="Kibo International"
           meta={[
-            { name: 'description', content: 'Kibo Localization' },
-            { name: 'keywords', content: 'homepage, kibo, localization, international, localisation' },
+            { name: 'description', content: 'Kibo International will take care of all your localization needs with services that range from translation, interpreting, and more!' },
+            { name: 'keywords', content: 'homepage, kibo, localization, international, localisation, translation, interpreting' },
             { property: 'twitter:card', content: 'summary' },
             { property: 'twitter:site', content: '@kibo_int' },
-            { property: 'twitter:title', content: 'Kibo' },
-            { property: 'twitter:description', content: 'Kibo Localization' },
+            { property: 'twitter:title', content: 'Kibo International' },
+            { property: 'twitter:description', content: 'Kibo International will take care of all your localization needs with services that range from translation, interpreting, and more!' },
             { property: 'twitter:creator', content: 'Kibo' },
             { property: 'twitter:image', content: 'http://kibo-int.com/img/city.jpeg' },
             { property: 'og:title', content: 'Kibo' },
             { property: 'og:url', content: 'http://kibo-int.com' },
             { property: 'og:image', content: 'http://kibo-int.com/img/city.jpeg' },
-            { property: 'og:description', content: 'Kibo Localization' },
-            { property: 'og:site_name', content: 'Kibo' },
+            { property: 'og:description', content: 'Kibo International will take care of all your localization needs with services that range from translation, interpreting, and more!' },
+            { property: 'og:site_name', content: 'Kibo International' },
             { name: 'theme-color', content: '#ff8939' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
           ]}
