@@ -80,8 +80,7 @@ const FullImg = styled.img`
 
 // Grid
 const Grid = styled.div`
-  align-items: center;
-  justify-items: center;
+  align-items: ${({ alignCenter }) => alignCenter && 'center'};
   display: grid;
   grid-column-gap: ${({ noGap, theme }) => (noGap ? 0 : `${theme.gap * 2}rem`)};
   grid-row-gap: ${({ noGap, theme }) => (noGap ? 0 : `${theme.gap * 2}rem`)};

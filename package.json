@@ -22,6 +22,7 @@
     "gatsby-transformer-remark": "^1.7.32",
     "gatsby-transformer-sharp": "^1.6.16",
     "gh-pages": "^1.1.0",
+    "intl": "^1.2.5",
     "prop-types": "^15.6.0",
     "react": "16.2.0",
     "react-dom": "^16.2.0",

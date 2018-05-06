@@ -77,6 +77,10 @@ export default {
       fontSize: '1.6rem',
       lineHeight: 1.56,
     },
+    xSmall: {
+      fontSize: '1.4rem',
+      lineHeight: 1.5,
+    },
     weight: 400,
   },
   siteWidth: '144rem',

@@ -93,15 +93,21 @@ const Text = styled.p`
     return theme.colors.bodyText;
   }};
   font-family: 'Muli', Helvetica, arial, sans-serif;
-  font-size:${({ large, small, theme }) => {
+  font-size:${({
+    large, small, xSmall, theme,
+  }) => {
     if (large) return theme.bodyText.large.fontSize;
     if (small) return theme.bodyText.small.fontSize;
+    if (xSmall) return theme.bodyText.xSmall.fontSize;
     return theme.bodyText.standard.fontSize;
   }};
   font-weight: ${({ theme, bold }) => (bold ? 800 : theme.bodyText.weight)};
-  line-height:${({ large, small, theme }) => {
+  line-height:${({
+    large, small, xSmall, theme,
+  }) => {
     if (large) return theme.bodyText.large.lineHeight;
     if (small) return theme.bodyText.small.lineHeight;
+    if (xSmall) return theme.bodyText.xSmall.lineHeight;
     return theme.bodyText.standard.lineHeight;
   }};
   text-align: ${({ center }) => center && 'center'};
@@ -109,6 +115,10 @@ const Text = styled.p`
 `;
 
 // List Item
+const Ul = styled.ul`
+  list-style: none;
+`;
+
 const Li = Text.withComponent('li');
 
 // Link Styles
@@ -134,6 +144,7 @@ const Typography = {
   H5,
   H6,
   Text,
+  Ul,
   Li,
   LinkText,
   KiboLink,

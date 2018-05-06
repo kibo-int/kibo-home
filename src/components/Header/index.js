@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
+import { FormattedMessage } from 'react-intl';
 
 import { media, flexbox } from '../../styles/utils';
+import { Ul, Li } from '../../styles/typography';
 
 const HeaderContainer = styled.header`
   ${flexbox};
@@ -15,7 +17,7 @@ const HeaderContainer = styled.header`
   z-index: 1000;
 
   ${media.medium`
-    justify-content: center;
+    /* justify-content: center; */
   `};
 `;
 
@@ -37,7 +39,17 @@ const NavItem = styled.a`
   }
 `;
 
-const Header = () => (
+const NavLi = Li.extend`
+  display: inline-block;
+  margin-right: 1rem;
+  border-bottom: ${({ active, theme = { colors: {} } }) => active && `2px solid ${theme.colors.orange}`};
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const Header = ({ language, toggleLanguage }) => (
   <HeaderContainer between alignCenter>
     <Link to="/">
       <svg width="69" height="28" viewBox="0 0 69 28" version="1.1">
@@ -60,10 +72,39 @@ const Header = () => (
     </Link>
 
     <Nav>
-      <NavItem href="#about">Mission</NavItem>
-      <NavItem href="#services">Services</NavItem>
-      <NavItem href="#contact">Contact</NavItem>
+      <NavItem href="#about">
+        <FormattedMessage
+          id="nav.mission"
+          defaultMessage="Mission"
+        />
+      </NavItem>
+      <NavItem href="#services">
+        <FormattedMessage
+          id="nav.services"
+          defaultMessage="Services"
+        />
+      </NavItem>
+      <NavItem href="#contact">
+        <FormattedMessage
+          id="nav.contact"
+          defaultMessage="Contact"
+        />
+      </NavItem>
     </Nav>
+    <Ul>
+      <NavLi xSmall onClick={() => toggleLanguage('en')} active={language === 'en'}>
+        <FormattedMessage
+          id="nav.english"
+          defaultMessage="EN"
+        />
+      </NavLi>
+      <NavLi xSmall onClick={() => toggleLanguage('ja')} active={language === 'ja'}>
+        <FormattedMessage
+          id="nav.japanese"
+          defaultMessage="日"
+        />
+      </NavLi>
+    </Ul>
   </HeaderContainer>
 );
 
