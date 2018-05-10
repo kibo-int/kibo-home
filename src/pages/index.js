@@ -218,7 +218,7 @@ const IndexPage = () => (
         </GridItem>
       </ServicesGrid>
 
-      <Grid >
+      <Grid>
         <GridItem center>
           <MarginTopDiv marginTop={10}>
             <H6 gray small>
