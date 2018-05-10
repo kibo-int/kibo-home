@@ -7,7 +7,7 @@ import '../../static/fontawesome/fa-solid.min';
 import '../../static/fontawesome/fa-brands.min';
 import '../../static/fontawesome/fa-regular.min';
 
-import { Title, H2, H3, Text, LinkText } from '../styles/typography';
+import { Title, H2, H3, H6, Text, LinkText } from '../styles/typography';
 import { media, flexbox, Grid, GridItem, Section } from '../styles/utils';
 
 const Hero = styled.div`
@@ -30,16 +30,16 @@ const AboutGridItem = GridItem.extend`
   `};
 `;
 
-const ExplainSection = Section.extend`
-  background: ${({ theme = { colors: {} } }) => theme.colors.lightGray};
-  display: grid;
-  grid-template-columns: 66% 1fr;
-  grid-gap: 0;
+// const ExplainSection = Section.extend`
+//   background: ${({ theme = { colors: {} } }) => theme.colors.lightGray};
+//   display: grid;
+//   grid-template-columns: 66% 1fr;
+//   grid-gap: 0;
 
-  ${media.medium`
-    grid-template-columns: 1fr;
-  `};
-`;
+//   ${media.medium`
+//     grid-template-columns: 1fr;
+//   `};
+// `;
 
 const ServicesSection = Section.extend`
 `;
@@ -98,6 +98,10 @@ const ResponsiveImg = styled.img`
   `};
 `;
 
+const MarginTopDiv = styled.div`
+  margin-top: ${({ marginTop }) => (`${marginTop}rem` || '5rem')};
+`;
+
 const IndexPage = () => (
   <div>
     <Hero>
@@ -120,50 +124,36 @@ const IndexPage = () => (
       <Grid cols={2} alignCenter>
         <ResponsiveImg src="/img/kibo-translate.svg" alt="" />
         <AboutGridItem col={2}>
-          <H2 orange small light>
+          <H2 orange small>
             <FormattedMessage
               id="about.our_mission"
               defaultMessage="OUR MISSION"
             />
           </H2>
-          <Text bold large>
+          <Text large>
             <FormattedMessage
               id="about.linguistic_solutions"
               defaultMessage="We provide linguistic solutions for small to medium projects, including translation, interpreting and much more."
             />
           </Text>
+
+          <MarginTopDiv>
+            <H2 orange small>
+              <FormattedMessage
+                id="explain.set_apart"
+                defaultMessage="WHAT SETS US APART"
+              />
+            </H2>
+            <Text>
+              <FormattedMessage
+                id="explain.set_apart_description"
+                defaultMessage="We have our eyes constantly set on the future, and make it our goal to preemptively deal with any translation issue that may arise before it has the chance to. From making sure translations are as accurate and true to the original content while making sure they sound natural in the target language, to deeply researching content to ensure only the most pertinent of translations make it to our client, we are much more than an ordinary translation company."
+              />
+            </Text>
+          </MarginTopDiv>
         </AboutGridItem>
       </Grid>
     </AboutSection>
-
-    <ExplainSection id="explain">
-      <div>
-        <H2 orange small light>
-          <FormattedMessage
-            id="explain.set_apart"
-            defaultMessage="WHAT SETS US APART"
-          />
-        </H2>
-        <Text bold large>
-          <FormattedMessage
-            id="explain.set_apart_description"
-            defaultMessage="We have our eyes constantly set on the future, and make it our goal to preemptively deal with any translation issue that may arise before it has the chance to. From making sure translations are as accurate and true to the original content while making sure they sound natural in the target language, to deeply researching content to ensure only the most pertinent of translations make it to our client, we are much more than an ordinary translation company."
-          />
-        </Text>
-        <H2 orange small light>
-          <FormattedMessage
-            id="explain.difference"
-            defaultMessage="What is the Difference Between &quot; Translation&quot; and &quot;Localization&quot;?"
-          />
-        </H2>
-        <Text bold large>
-          <FormattedMessage
-            id="explain.difference_description"
-            defaultMessage="Translation is just that, translation.One language to another. Localization takes an extra step by slightly modifying content when needed sound natural whilst still delivering the initially intended information."
-          />
-        </Text>
-      </div>
-    </ExplainSection>
 
     <ServicesSection id="services" black>
       <H2 center lightGray>
@@ -227,6 +217,25 @@ const IndexPage = () => (
           </Text>
         </GridItem>
       </ServicesGrid>
+
+      <Grid >
+        <GridItem center>
+          <MarginTopDiv marginTop={10}>
+            <H6 gray small>
+              <FormattedMessage
+                id="explain.difference"
+                defaultMessage="What is the Difference Between &quot; Translation&quot; and &quot;Localization&quot;?"
+              />
+            </H6>
+            <Text white small>
+              <FormattedMessage
+                id="explain.difference_description"
+                defaultMessage="Translation is just that, translation. One language to another. Localization takes an extra step by slightly modifying content when needed sound natural whilst still delivering the initially intended information."
+              />
+            </Text>
+          </MarginTopDiv>
+        </GridItem>
+      </Grid>
     </ServicesSection>
 
     <WorkWithUsSection id="contact" orange>
