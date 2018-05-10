@@ -67,7 +67,7 @@ class TemplateWrapper extends Component {
               <html lang="en" />
             </Helmet>
             <Header language={language} toggleLanguage={this.toggleLanguage} />
-            <Main noPadding>
+            <Main noPadding >
               {children()}
             </Main>
           </div>

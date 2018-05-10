@@ -30,17 +30,6 @@ const AboutGridItem = GridItem.extend`
   `};
 `;
 
-// const ExplainSection = Section.extend`
-//   background: ${({ theme = { colors: {} } }) => theme.colors.lightGray};
-//   display: grid;
-//   grid-template-columns: 66% 1fr;
-//   grid-gap: 0;
-
-//   ${media.medium`
-//     grid-template-columns: 1fr;
-//   `};
-// `;
-
 const ServicesSection = Section.extend`
 `;
 

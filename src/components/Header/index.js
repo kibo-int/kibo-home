@@ -15,10 +15,6 @@ const HeaderContainer = styled.header`
   padding: 1rem ${({ theme }) => theme.containerPadding}rem;
   width: 100%;
   z-index: 1000;
-
-  ${media.medium`
-    /* justify-content: center; */
-  `};
 `;
 
 const Nav = styled.nav`
