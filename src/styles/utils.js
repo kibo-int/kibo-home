@@ -1,6 +1,4 @@
-import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import Link from 'gatsby-link';
 
 // Media Breakpoints
 const sizes = {

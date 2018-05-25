@@ -41,7 +41,7 @@ class TemplateWrapper extends Component {
     // const { language } = this.state;
     const { children } = this.props;
 
-    const language = navigator.language.substring(0, 2) === 'ja' ? 'ja' : 'en';
+    const language = navigator && navigator.language.substring(0, 2) === 'ja' ? 'ja' : 'en';
 
     return (
       <IntlProvider locale={language} messages={translations[language]}>
