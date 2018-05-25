@@ -23,16 +23,18 @@ const Main = MainStyle.extend`
 
 addLocaleData([...en, ...ja]);
 
-let language;
+// let language = 'en';
+const language =
+navigator.language.substring(0, 2) === 'ja' ? 'ja' : 'en';
 
 class TemplateWrapper extends Component {
   // state = {
   //   language: 'en',
   // }
 
-  componentDidMount = () => {
-    language = navigator.language.substring(0, 2) === 'ja' ? 'ja' : 'en';
-  }
+  // componentDidMount = () => {
+
+  // }
 
   // toggleLanguage = (language) => {
   //   this.setState({ language });
