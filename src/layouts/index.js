@@ -23,18 +23,14 @@ const Main = MainStyle.extend`
 
 addLocaleData([...en, ...ja]);
 
-// let language = 'en';
-const language =
-navigator.language.substring(0, 2) === 'ja' ? 'ja' : 'en';
-
 class TemplateWrapper extends Component {
-  // state = {
-  //   language: 'en',
-  // }
+  state = {
+    language: 'en',
+  }
 
-  // componentDidMount = () => {
-
-  // }
+  componentDidMount = () => {
+    this.setState({language: navigator.language.substring(0, 2) === 'ja' ? 'ja' : 'en' });
+  }
 
   // toggleLanguage = (language) => {
   //   this.setState({ language });
@@ -43,7 +39,7 @@ class TemplateWrapper extends Component {
   // }
 
   render() {
-    // const { language } = this.state;
+    const { language } = this.state;
     const { children } = this.props;
 
     return (
