@@ -8,7 +8,7 @@ export default {
     'nav.services': 'サービス',
     'nav.contact': 'お問い合わせ',
 
-    'hero.kibo_localization': '',
+    'hero.kibo_localization': 'Kibo Localization',
     'hero.expand_your_reach': 'あなたの可能性を広げる',
 
     'about.our_mission': '我々の使命',

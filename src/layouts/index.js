@@ -25,14 +25,13 @@ addLocaleData([...en, ...ja]);
 
 class TemplateWrapper extends Component {
   state = {
-    language: 'en',
+    language: navigator.language.substring(0, 2),
   }
-
-  componentDidMount = () =>
-    this.setState({ language: navigator.language.substring(0, 2) });
 
   toggleLanguage = (language) => {
     this.setState({ language });
+    console.log('Language: ', language);
+    console.log(this.state.language);
   }
 
   render() {
