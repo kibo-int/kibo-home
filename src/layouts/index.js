@@ -24,22 +24,24 @@ const Main = MainStyle.extend`
 addLocaleData([...en, ...ja]);
 
 class TemplateWrapper extends Component {
-  state = {
-    language: 'en',
-  }
+  // state = {
+  //   language: 'en',
+  // }
 
-  componentDidMount = () =>
-    this.setState({ language: navigator.language.substring(0, 2) });
+  // componentDidMount = () =>
+  //   this.setState({ language: navigator.language.substring(0, 2) });
 
-  toggleLanguage = (language) => {
-    this.setState({ language });
-    console.log('Langauge: ', language);
-    console.log(this.state.language);
-  }
+  // toggleLanguage = (language) => {
+  //   this.setState({ language });
+  //   console.log('Langauge: ', language);
+  //   console.log(this.state.language);
+  // }
 
   render() {
-    const { language } = this.state;
+    // const { language } = this.state;
     const { children } = this.props;
+
+    const language = navigator.language.substring(0, 2) === 'ja' ? 'ja' : 'en';
 
     return (
       <IntlProvider locale={language} messages={translations[language]}>
