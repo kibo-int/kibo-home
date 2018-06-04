@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 import { FormattedMessage } from 'react-intl';
 
 import { media, flexbox } from '../../styles/utils';
-// import { Ul, Li } from '../../styles/typography';
+import { Ul, Li } from '../../styles/typography';
 
 const HeaderContainer = styled.header`
   ${flexbox};
@@ -35,15 +35,15 @@ const NavItem = styled.a`
   }
 `;
 
-// const NavLi = Li.extend`
-//   display: inline-block;
-//   margin-right: 1rem;
-//   border-bottom: ${({ active, theme = { colors: {} } }) => active && `2px solid ${theme.colors.orange}`};
+const NavLi = Li.extend`
+  display: inline-block;
+  margin-right: 1rem;
+  border-bottom: ${({ active, theme = { colors: {} } }) => active && `2px solid ${theme.colors.orange}`};
 
-//   &:hover {
-//     cursor: pointer;
-//   }
-// `;
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
 const Header = ({ language, toggleLanguage }) => (
   <HeaderContainer between alignCenter>
@@ -87,7 +87,7 @@ const Header = ({ language, toggleLanguage }) => (
         />
       </NavItem>
     </Nav>
-    {/* <Ul>
+    <Ul>
       <NavLi xSmall onClick={() => toggleLanguage('en')} active={language === 'en'}>
         <FormattedMessage
           id="nav.english"
@@ -100,7 +100,7 @@ const Header = ({ language, toggleLanguage }) => (
           defaultMessage="日"
         />
       </NavLi>
-    </Ul> */}
+    </Ul>
   </HeaderContainer>
 );
 

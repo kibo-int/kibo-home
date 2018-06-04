@@ -29,14 +29,14 @@ class TemplateWrapper extends Component {
   }
 
   componentDidMount = () => {
-    this.setState({language: navigator.language.substring(0, 2) === 'ja' ? 'ja' : 'en' });
+    this.setState({ language: navigator.language.substring(0, 2) === 'ja' ? 'ja' : 'en' });
   }
 
-  // toggleLanguage = (language) => {
-  //   this.setState({ language });
-  //   console.log('Langauge: ', language);
-  //   console.log(this.state.language);
-  // }
+  toggleLanguage = (language) => {
+    this.setState({ language });
+    console.log('Langauge: ', language);
+    console.log(this.state.language);
+  }
 
   render() {
     const { language } = this.state;
@@ -70,8 +70,8 @@ class TemplateWrapper extends Component {
               <html lang="en" />
             </Helmet>
             <Header language={language} toggleLanguage={this.toggleLanguage} />
-            <Main noPadding >
-              {children()}
+            <Main noPadding>
+              {children({ ...this.props, language })}
             </Main>
           </div>
         </ThemeProvider>
